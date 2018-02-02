@@ -1,0 +1,91 @@
+*** Targets ***
+
+probe = FPing
+
+menu   = Top
+title  = Network Latency Grapher
+remark = Welcome to the SmokePing website of mine. \
+         Here you will learn all about the latency of our network.
+
+
+
++ Local
+
+menu    = Local
+title   = Local Network
+#parents = owner:/Test/James location:/
+
+
+++ LocalMachine
+
+menu   = localhost
+title  = localhost
+host   = localhost
+#alerts = someloss
+
+
+
++ ISP_uplink_QC
+
+menu	= ISP uplink QC
+title	= ISP uplink QC
+
+
+++ gw_ping
+
+menu	= gw ping
+title	= default gateway (192.168.1.254) ping
+host	= 192.168.1.254
+
+
+++ gw_alt_ping
+
+menu	= gw alt ping
+title	= alternative default gateway (172.16.26.1) ping
+host	= 172.16.26.1
+
+
+++ google_ping
+
+menu	= Google DNS ping
+title	= Google free DNS ping
+host	= 8.8.8.8
+
+
+++ ya_ping
+
+menu	= Yandex ping
+title	= ya.ru ping
+host	= ya.ru
+
+
+++ google
+
+probe	= EchoPingHttps
+menu	= Google
+title	= google.com HTTPS
+host	= google.com
+
+
+++ youtube
+
+probe	= EchoPingHttps
+menu	= YouTube
+title	= youtube.com HTTPS
+host	= youtube.com
+
+
+++ ya
+
+probe	= EchoPingHttps
+menu	= Yandex
+title	= ya.ru HTTPS
+host	= ya.ru
+
+
+++ mgts
+
+probe	= EchoPingHttps
+menu	= MGTS
+title	= mgts.ru HTTPS
+host	= mgts.ru
